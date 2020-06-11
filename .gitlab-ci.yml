@@ -5,7 +5,7 @@ before_script:
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
   ##
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
+  - 'which ssh-agent || ( yum update -y && yum install openssh-client git -y )'
 
   ##
   ## Run ssh-agent (inside the build environment)
@@ -53,8 +53,8 @@ before_script:
   ## Optionally, if you will be using any Git commands, set the user name and
   ## email.
   ##
-  ## git config --global user.email "katharina.joksch@gmail.com"
-  ## git config --global user.name "Katharina Joksch"
+  - git config --global user.email "katharina.joksch@gmail.com"
+  - git config --global user.name "Katharina Joksch"
 
 
 Test SSH:
